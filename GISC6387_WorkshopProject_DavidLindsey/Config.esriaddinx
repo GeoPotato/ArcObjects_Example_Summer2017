@@ -1,0 +1,36 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>GISC6387_WorkshopProject_DavidLindsey</Name>
+  <AddInID>{553f0c76-03fd-454b-9ec4-7e135c03990c}</AddInID>
+  <Description>GISC 6387 Workshop Project</Description>
+  <Version>1.0</Version>
+  <Image>Images\GISC6387_WorkshopProject_DavidLindsey.png</Image>
+  <Author>dcl160230</Author>
+  <Company></Company>
+  <Date>8/3/2017</Date>
+  <Targets>
+    <Target name="Desktop" version="10.4" />
+  </Targets>
+  <AddIn language="CLR" library="GISC6387_WorkshopProject_DavidLindsey.dll" namespace="GISC6387_WorkshopProject_DavidLindsey">
+    <ArcMap>
+      <Commands>
+        <Button id="GISC6387_WorkshopProject_DavidLindsey_btn_HazardDataMenu" class="btn_HazardDataMenu" message="This button will allow access to natural hazard data downloads." caption="Hazard Data Menu" tip="Hazard Data Button" category="Add-In Controls" image="Images\HazardDataButton.png" />
+        <Button id="GISC6387_WorkshopProject_DavidLindsey_btn_LockRelease" class="btn_LockRelease" message="This button will release any hung shapefile locks." caption="Lock Release" tip="Lock Release Button" category="Add-In Controls" image="Images\lockRelease.png" />
+        <Button id="GISC6387_WorkshopProject_DavidLindsey_btn_Symbology" class="btn_Symbology" message="Select layer from Table of Contents and click button to assign symbology." caption="Hazard Symbology" tip="Symbology Button" category="Add-In Controls" image="Images\btnSymbology.png" onDemand="false" />
+      </Commands>
+      <DockableWindows>
+        <DockableWindow id="GISC6387_WorkshopProject_DavidLindsey_dockWindow" class="dockWindow+AddinImpl" caption="My Dockable Window" image="Images\dockWindow.png">
+          <InitialPlacement height="300" width="300" state="pinned" position="left" />
+        </DockableWindow>
+      </DockableWindows>
+      <Toolbars>
+        <Toolbar id="GISC6387_WorkshopProject_DavidLindsey_Natural_Hazard_Toolbar" caption="Natural Hazard Toolbar" showInitially="true">
+          <Items>
+            <Button refID="GISC6387_WorkshopProject_DavidLindsey_btn_HazardDataMenu" />
+            <Button refID="GISC6387_WorkshopProject_DavidLindsey_btn_LockRelease" />
+            <Button refID="GISC6387_WorkshopProject_DavidLindsey_btn_Symbology" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
